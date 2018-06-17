@@ -5,13 +5,14 @@
 	<link rel="stylesheet" type="text/css" href="login.css">
 	<link href="https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Expanded" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Pridi" rel="stylesheet">
-
+	<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
 </head>
 <body>
 	<div class="split left">
 		<div class="centered">
 			<!-- LOGO -->
-    		<img src="rmkcetlogo.png">
+			<h2>R.M.K College Of Engineering And Technology</h2>
+    		<img id="logo" src="rmkcetlogo.png">
 
   		</div>
 	</div>
@@ -24,22 +25,22 @@
 
 	  			<div class="container">
 	  				<legend>LEAVE APPLICATION SYSTEM</legend>
-	  				<label for="regno"><b>DEPARTMENT</b></label>
+	  				<label for="regno" id="department"><b>DEPARTMENT</b></label>
 	  				<div class="dropdown">
 		  				<select name="department">
-							<option value="cse">CSE</option>
-							<option value="ece">ECE</option>
-							<option value="eee">EEE</option>
-							<option value="mech">MECH</option>
+							<option value="cse"><div class="dropdown-content">CSE</div></option>
+							<option value="ece"><div class="dropdown-content">ECE</div></option>
+							<option value="eee"><div class="dropdown-content">EEE</div></option>
+							<option value="mech"><div class="dropdown-content">MECH</div></option>
 						</select>
 					</div>
-	  				<label for="regno"><b>REGISTERATION NUMBER</b></label>
-		    		<input type="text" placeholder="Registeration ID" name="uname" autocomplete="off" required>
+	  				<label for="regid" id="regid"><b>REGISTERATION NUMBER</b></label>
+		    		<input type="text" placeholder="Registeration ID" name="regid" autocomplete="off" required>
 
-		    		<label for="sname"><b>NAME</b></label>
-		    		<input type="text" placeholder="Name" name="uname" autocomplete="off" required>
+		    		<label for="sname" id="sname"><b>NAME</b></label>
+		    		<input type="text" placeholder="Name" name="sname" autocomplete="off" required>
 
-		    		<label for="psw"><b>PASSWORD</b></label>
+		    		<label for="psw" id="psw"><b>PASSWORD</b></label>
 		    		<input type="password" placeholder="Password" name="psw" autocomplete="off" required>
 
 		    		<button type="submit">Log in</button>
@@ -47,5 +48,6 @@
 			</form>
  		</div>
 	</div>
+	<script type="text/javascript" src="login.js"></script>
 </body>
 </html>
