@@ -1,0 +1,28 @@
+#logo
+{
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 30%;
+}
+@media only screen and (max-width: 600px) {
+    #logo
+    {
+        margin-top: 20px;
+    }
+}
+.formdiv
+{
+    width: 80%;
+}
+#form
+{
+    /*width: 80%;*/
+    margin-top: 7%;
+}
+@media only screen and (max-width: 600px) {
+    #form
+    {
+        margin-top: 0px;
+    }
+}

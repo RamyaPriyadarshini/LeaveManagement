@@ -1,0 +1,32 @@
+{% extends "portal/base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class = "row">
+        <div class = "col s12 m4 l4">
+            <img id="logo" src="{% static 'portal/logo.png' %}">
+        </div>
+        <div class = "col s12 m8 l8" id="form">
+            <div class="row formdiv">
+                <div class="col s12 center-align formdiv">
+                    <h1>Login</h1>
+                </div>
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="regno" type="text" class="validate">
+                            <label for="regno">REGISTRATION NUMBER</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="password" type="password" class="validate">
+                            <label for="password">PASSWORD</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
