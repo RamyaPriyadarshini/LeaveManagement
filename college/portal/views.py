@@ -3,4 +3,8 @@ from django.shortcuts import render
 
 
 def portal(request):
-    return render(request,'portal/login.html')
+    return render(request, 'portal/login.html')
+
+
+def profile(request):
+    return render(request, 'portal/profile.html')
