@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% include 'student_portal/form-template.html' %}
+        <button type="submit">submit</button>
+    </form>
+</body>
+</html>
