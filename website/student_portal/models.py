@@ -14,3 +14,6 @@ class Personal(models.Model):
 
     def __str__(self):
         return self.name + ' - ' + self.dept + ' - ' + str(self.regno)
+
+    def get_absolute_url(self):
+        return reverse('views.DetailView.as_view()', kwargs={'stud': self.pk})
