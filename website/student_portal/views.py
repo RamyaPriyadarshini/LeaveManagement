@@ -31,18 +31,21 @@ class PersonalCreate(CreateView):
     model = Personal
     fields = ['name','dept','regno']
 
-# class UserFormView(View):
-#     form_class = UserForm
-#     template_name = 'student_portal/login.html'
-
-#     def get(self, request):
-#         form = self.form_class(None)
-#         return render(request, self.template_name, {'form': form})
-#         username = form.cleaned_data['username']
-#         password = form.cleaned_data['password']
-#         user = authenticate(username=username, password=password)
-#         if user is not none:
-#             if user.is_active:
-#                 login(request, user)
-#                 redirect(str(username))
-#         return render(request, self.template_name, {'form': form})
+def register(request):
+    form = UserForm(request.POST or None)
+    if form.is_valid():
+        user = form.save(commit=False)
+        username = form.cleaned_data['username']
+        password = form.cleaned_data['password']
+        user.set_password(password)
+        user.save()
+        user = authenticate(username=username, password=password)
+        if user is not None:
+            if user.is_active:
+                login(request, user)
+                albums = Personal.objects.filter(user=request.user)
+                return render(request, 'music/index.html', {'albums': albums})
+    context = {
+        "form": form,
+    }
+    return render(request, 'music/register.html', context)
